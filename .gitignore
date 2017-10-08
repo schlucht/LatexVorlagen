@@ -7,6 +7,7 @@ Daten/Privat/
 *.aux
 *.bbl
 *.blg
+*-blx.bib
 *.dvi
 *.fdb_latexmk
 *.glg
