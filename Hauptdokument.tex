@@ -4,12 +4,11 @@
 \usepackage[T1]{fontenc}
 \usepackage{lmodern}
 \usepackage{ngerman}
-\usepackage{bibleref}
-\usepackage{bibleref-german}
 \usepackage{blindtext}
 \usepackage{graphicx}
 \usepackage{geometry}
 \usepackage[babel, german=swiss]{csquotes}
+\usepackage{Vorlagen/bibel}
 
 %%%%%%%%%%%%%%%%%%%%%%Link Formatierung%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \usepackage[colorlinks = true,
@@ -25,47 +24,6 @@ anchorcolor = blue]{hyperref}
 
 \addbibresource{literatur.bib}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Makro zur Namensvervollstädigung
-% Parameter: Kürzel --- Bibel
-%			LuN			Neue Luther Übersetzung
-%			Sch2		Schlachter 2000
-%			Elb			Elbfelder
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-	\newcommand{\bib}[1]{%
-	\ifthenelse{\equal{#1}{LuN}}{Neue Luther}{%
-		\ifthenelse{\equal{#1}{Sch2}}{Schlachter 2000}{%
-			\ifthenelse{\equal{#1}{HFA}}{Hoffnung für Alle}{%
-				\ifthenelse{\equal{#1}{ELB}}{Elbfelder}{#1}%
-			}%
-		}%
-	}%
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%
-% Makro für Bibelzitate
-% 
-% Beispiel: 
-%		\begin{bibeltext}{ELB}{Matt}{1:1-4}
-%			Ich bin der zitierte Bibeltext.
-%		\end{bibeltext}
-%
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\newcommand{\bibtit}[1]{\large\bib{#1}}
-\newcommand{\tmpbib}{Hallo}
-\newenvironment{bibeltext}[3]{%
-	\quote \begin{itshape}
-		\begin{scriptsize}
-			(\bib{#1})	
-		\end{scriptsize}	
-		\biblerefformat{lang}
-		\renewcommand{\tmpbib}{\textbf{\bibleverse{#2}(#3)}}		
-	}{%	
-		\tmpbib
-	\end{itshape}
-	\endquote		
-}
 %%%%%%%%%%%%% Titelseite %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \title{Freikirchen, Katholische Kirchen, Evangelische Kirchen}
 \author{Schmid Lothar}
@@ -78,6 +36,9 @@ anchorcolor = blue]{hyperref}
 \maketitle[-1]
 
 \include{inhaltsverzeichnis}
+\begin{bibeltext}{ELB}{Matt}{1:1-4}
+				Ich bin der zitierte Bibeltext.
+\end{bibeltext}
 \include{Texte/vorwort}
 \include{bibliothek}
 
