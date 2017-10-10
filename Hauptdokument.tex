@@ -18,7 +18,11 @@ citecolor = black,
 anchorcolor = blue]{hyperref}
 
 %%%%%%%%%%%%%%%%%%%%%Bibliothek%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\usepackage[backend=bibtex,style=verbose,backref=true,]{biblatex}
+
+\usepackage[backend=bibtex,
+			style=alphabetic,
+			backref=true,]{biblatex}
+
 \setlength{\bibitemsep}{1em}     % Abstand zwischen den Literaturangaben
 \setlength{\bibhang}{2em}        % Einzug nach jeweils erster Zeile
 
@@ -36,7 +40,7 @@ anchorcolor = blue]{hyperref}
 \maketitle[-1]
 
 \include{inhaltsverzeichnis}
-
+\input{Texte/dienst}
 
 \include{bibliothek}
 
