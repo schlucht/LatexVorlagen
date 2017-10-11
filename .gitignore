@@ -1,6 +1,6 @@
 #Ordner daten ignorieren
 
-Daten/Privat/
+Texte/
 *.acn
 *.acr
 *.alg
