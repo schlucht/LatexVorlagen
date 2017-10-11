@@ -1,0 +1,42 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage{signatut}[2017/10/10 Signatur Vorlagen]
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Vollständiger Name
+% Parameter: 
+% Ausgabe: Schmid Lothar	
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\name}{%
+	Schmid Lothar
+}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Adresse fix
+% Ausgabe:
+
+% Schmid Lothar
+% Hauptstrasse 121
+% 3903 Birgisch
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newcommand{\adrblock}{%
+	Schmid Lothar \\
+	Hauptstrasse 121 \\
+	3903 Birgisch \\	
+}
+
+\newcommand{\adrline}{%
+	\textbf{Schmid Lothar} (Hauptstrasse 121, 3903 Birgisch) \\	
+}
+
+\newcommand{\adrblockflex}[3]{%
+		#1 \\
+		#2 \\
+		#3 \\
+	}
+\newcommand{\adrlineflex}[3]{%
+	\textbf{#1} (#2, #3) \\	
+}
