@@ -8,6 +8,7 @@ Daten/Privat/
 *.bbl
 *.blg
 *-blx.bib
+*.bcf
 *.dvi
 *.fdb_latexmk
 *.glg
@@ -30,6 +31,7 @@ Daten/Privat/
 *.ps
 *.snm
 *.synctex.gz
+*.run.xml
 *.toc
 *.vrb
 *.xdy
